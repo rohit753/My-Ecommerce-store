@@ -1,6 +1,22 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
+
+const Info = styled.div`
+opacity: 0;
+   z-index :3 ;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background-color: rgba(0,0,0,0.2222);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   position: absolute;
+`
+
 const Container = styled.div`
     flex: 1;
     margin: 5px;
@@ -13,6 +29,10 @@ const Container = styled.div`
     margin-top: 15px;
     background-color: #f5fbfd;
     position: relative;
+    &:hover ${Info}{
+     opacity: 1;
+     transition: all .8s ease;
+    }
     /* box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
@@ -32,19 +52,7 @@ const Image = styled.img`
     z-index: 2;
     
 `
-const Info = styled.div`
-opacity: 0;
-   z-index :3 ;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   background-color: rgba(0,0,0,0.2222);
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   position: absolute;
-`
+
 const Icon = styled.div`
     width: 40px;
     height: 40px;
