@@ -1,4 +1,4 @@
-import { Facebook, GitHub, Instagram, LinkedIn } from '@material-ui/icons'
+import { Facebook, GitHub, Instagram, LinkedIn, MailOutlined, Phone, Room } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
 
@@ -42,22 +42,39 @@ padding: 20px;
 `
 
 const Title=styled.h3`
-    
+     margin-bottom: 30px;
     
 `
 
 const List=styled.ul`
-    
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
 `
 
 const ListItem=styled.li`
-    
+  width  :50% ;
+  margin-bottom: 10px;
 
 `
 
 const Right = styled.div`
 flex:1;
 padding: 20px;
+`
+
+const ContactItem=styled.div`
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+`
+const Payment = styled.img`
+    width: 60%;
+`
+const Link = styled.a`
+color: white;
 `
 
 const Footer = () => {
@@ -70,16 +87,16 @@ const Footer = () => {
               </Desc>   
               <SocialContainer>
                   <SocialIcon color="616161">
-                      <GitHub/>
+                     <Link target={'_blank'} href='https://github.com/rohit753'><GitHub /></Link> 
                   </SocialIcon>
                   <SocialIcon color="55ACEE">
-                      <LinkedIn/>
+                  <Link target={'_blank'} href='https://www.linkedin.com/in/rohit-kumar-sahu-/'>  <LinkedIn/></Link> 
                   </SocialIcon>
                   <SocialIcon color="E4405f">
-                      <Instagram/>
+                  <Link target={'_blank'} href='https://www.instagram.com/rohitkumarsahu_/'>   <Instagram/></Link> 
                   </SocialIcon>
                   <SocialIcon color="55ACEE">
-                      <Facebook/>
+                  <Link target={'_blank'} href='https://www.facebook.com/kumarsahurohit'>   <Facebook/></Link> 
                   </SocialIcon>
               </SocialContainer>
           </Left>
@@ -95,9 +112,22 @@ const Footer = () => {
                   <ListItem>Order Tracking</ListItem>
                   <ListItem>Wishlist</ListItem>
                   <ListItem>Terms</ListItem>
+                  <ListItem>Feedback</ListItem>
               </List>
           </Center>
-          <Right></Right>
+          <Right>
+              <Title>Contact</Title>
+              <ContactItem>
+                 <Room/> Kanpur, U.P,022020
+              </ContactItem>
+              <ContactItem>
+                <Phone/>  +91 7508541989
+              </ContactItem>
+              <ContactItem>
+                <MailOutlined/>   rohit753kumar@gmail.com
+              </ContactItem>
+              <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+          </Right>
 
     </Container>
   )
