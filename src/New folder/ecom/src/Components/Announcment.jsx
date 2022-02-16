@@ -2,16 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-height: 30px;
+height: 27px;
 background-color:coral ;
 color: white;
 display: flex;
-align-content: center;
+align-items: center;
 justify-content: center;
 font-style: 14px;
 font-weight: 500;
-
-
 `
 
 const Announcment = () => {

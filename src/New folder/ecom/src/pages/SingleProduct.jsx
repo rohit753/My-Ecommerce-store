@@ -6,10 +6,14 @@ import Announcment from '../Components/Announcment'
 import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 import Newsletter from '../Components/Newsletter'
+import { mobile } from "../reponsive"
+
+
 const Container = styled.div``
 const Wrapper = styled.div`
 padding: 50px;
 display: flex;
+${mobile({ padding: "10px",flexDirection: "column" })};
 
 `
 const ImageContain = styled.div`
@@ -19,10 +23,12 @@ const Image = styled.img`
 width: 100%;
 height: 80vh;
 object-fit: cover;
+${mobile({ height:   "40vh" })};
 `
 const InfoContainer = styled.div`
 flex: 1;
 padding: 0px 50px;
+${mobile({ padding:   "10px" })};
 `
 // const InfoContainer=styled.div``
 const Title = styled.h1`
@@ -42,6 +48,7 @@ width: 50%;
 margin: 30px 0px;
 display: flex;
 justify-content: space-between;
+${mobile({ width:   "100%" })};
 `
 const Filter = styled.div`
 display: flex;
@@ -70,12 +77,14 @@ width: 50%;
 display: flex;
 align-items: center;
 justify-content: space-between;
+${mobile({ width:   "100%" })};
 
 `
 const AmountContainer = styled.div`
 display: flex;
 align-items: center;
 font-weight: 700;
+${mobile({ width:   "100%" })};
 `
 const Amount = styled.span`
 width: 30px;
@@ -97,6 +106,7 @@ font-weight: 500;
 &:hover{
     background-color: wheat;
 }
+/* ${mobile({ width:   "100%" })}; */
 `
 // const Amount=styled.option``
 // const FilterContainer=styled.div``

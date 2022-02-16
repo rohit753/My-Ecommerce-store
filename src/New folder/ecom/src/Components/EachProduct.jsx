@@ -40,8 +40,8 @@ const Container = styled.div`
 `
 
 const Circle = styled.div`
-  width: 310px;
-  height: 330px;
+  width: 210px;
+  height: 230px;
   border-radius  :20% ;
   background-color: rgb(245, 255, 248);
   position: absolute;
@@ -62,7 +62,7 @@ const Icon = styled.div`
     align-items: center;
     justify-content: center;
     margin :15px ;
-    transition: all 0.35s ease;
+    transition: all 0.3s ease;
     &:hover{
         background-color:#e9f5f5;
         transform: scale(1.25);
